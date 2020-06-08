@@ -8,12 +8,25 @@ This is a basic API for a notekeeping application which allows the user to read,
 ```
 All the responses received are in JSON format. `POST` and `PATCH` requests have to be made in valid JSON format. A detailed overview of status codes encountered is also given.
 
+# OVERVIEW 
+This API allows users to read, create, edit and delete notes from a database. Once a note is created, it is stored as a javascript object in an array. The javascript object has the following property-value pairs:
+```
+PROPERTY  |  VALUE
+          |
+_id       |  Stores the unique id assigned to a note by mongoose
+          |
+title     |  Stores the title of a particular note
+          |
+contents  |  Stores the main body of the note
+```
+
 ## Response Codes 
 ### Response Codes
 ```
 200: Success
 201: Successfully Updated
 404: Entity cannot be found
+400: Bad Request
 500: Internal Server Error
 ```
 **REQUESTS AND RESPONSES:**
