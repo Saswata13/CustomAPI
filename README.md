@@ -5,7 +5,7 @@ An API for a note taking application with simple functionalities. The functional
 3. Edit (Using PATCH requests)
 4. Delete (Using DELETE requests)
 
-# READING NOTES
+## READING NOTES
 
 GET requests can be used in two ways to read the notes stored already in the database.
 
