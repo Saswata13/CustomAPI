@@ -11,7 +11,7 @@ GET requests can be used in two ways to read the notes stored already in the dat
 
 1. READING ALL THE NOTES STORED IN THE DATABASE:
 
-Example Request: http://localhost:3000/notes/
+Example Request: GET http://localhost:3000/notes/
 
 Example Response: 
 
