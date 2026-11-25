@@ -8,6 +8,14 @@ This is a basic API for a notekeeping application which allows the user to read,
 ```
 All the responses received are in JSON format. `POST` and `PATCH` requests have to be made in valid JSON format. A detailed overview of status codes encountered is also given.
 
+# SETUP
+1. Install Node.js, then run `npm install` in this folder.
+2. Set the `MONGODB_URI` environment variable to your MongoDB connection string. It is read from the environment
+   and is never stored in the code:
+   * macOS / Linux: `MONGODB_URI="mongodb+srv://<user>:<password>@<cluster>/<db>" npm start`
+   * Windows PowerShell: `$env:MONGODB_URI="mongodb+srv://<user>:<password>@<cluster>/<db>"; npm start`
+3. The API listens on port 3000 (or `PORT`). Try `GET http://localhost:3000/notes`.
+
 # OVERVIEW 
 This API allows users to read, create, edit and delete notes from a database. Once a note is created, it is stored as a javascript object in an array. The javascript object has the following property-value pairs:
 ```

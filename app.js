@@ -6,7 +6,13 @@ const mongoose = require('mongoose');
 
 const notesRoutes = require('./api/routes/notes');
 
-mongoose.connect("mongodb+srv://Saswata_13:lol@notekeeperapi-pkulp.mongodb.net/quemory?retryWrites=true&w=majority", {
+const MONGODB_URI = process.env.MONGODB_URI;
+if (!MONGODB_URI) {
+    console.error("Set the MONGODB_URI environment variable to your MongoDB connection string.");
+    process.exit(1);
+}
+
+mongoose.connect(MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
